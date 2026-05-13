@@ -21,20 +21,23 @@
 }
 
 .section_automotive .automotive_content {
-  padding-top: 6vh !important;
+  padding-top: 2vh !important;
 }
 
 .section_automotive .automotive_bg-image-wrapper {
-  max-height: 65vh !important;
-  margin-top: 14vh !important;
+  max-height: 60vh !important;
+  margin-top: 24vh !important;
 }
 
 @media (max-width: 991px) {
   .section_automotive {
     min-height: 400vh !important;
   }
+  .section_automotive .automotive_content {
+    padding-top: 4vh !important;
+  }
   .section_automotive .automotive_bg-image-wrapper {
-    max-height: 55vh !important;
-    margin-top: 18vh !important;
+    max-height: 50vh !important;
+    margin-top: 28vh !important;
   }
 }
