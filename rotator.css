@@ -1,19 +1,22 @@
 /* ----------------------------------------------------------------
-   watchit rotator — structural CSS only.
+   watchit rotator — empty by design.
 
-   Spacing / sizing (text padding-top, product margin-top, max-height,
-   glow positions) live as native styles in the Webflow Designer on:
-     .automotive_content
-     .automotive_bg-image-wrapper
-     .watchit-glow-left
-     .watchit-glow-right
-   so team members can adjust them visually from the style panel.
+   All structural + visual rules now live as native Webflow styles
+   on the following classes (editable in the Designer style panel):
 
-   Don't add those rules here — they'd override Designer edits.
+     .section_automotive           — min-height (section size)
+     .automotive_content           — padding-top, position
+     .automotive_bg-image-wrapper  — margin-top, max-height
+     .watchit-glow-left            — glow positioning
+     .watchit-glow-right           — glow positioning
+
+   The injected <script> still handles:
+     - wrapper background color (#020021) and overflow
+     - bottom fade gradient overlay
+     - canvas mix-blend-mode + radial mask
+     - the actual canvas frame-rendering animation
+
+   Keeping this file as a no-op so the existing <link> in the script
+   still resolves (200 OK) and we can put hot-patch CSS here later
+   if needed without redeploying the Webflow script.
 ---------------------------------------------------------------- */
-
-.section_automotive {
-  height: 100vh !important;
-  margin-bottom: 0 !important;
-  overflow: hidden !important;
-}
