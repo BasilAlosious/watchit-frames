@@ -1,7 +1,7 @@
 /* ----------------------------------------------------------------
-   watchit rotator — empty by design.
+   watchit rotator — minimal hot-fix CSS.
 
-   All structural + visual rules now live as native Webflow styles
+   Most structural + visual rules live as native Webflow styles
    on the following classes (editable in the Designer style panel):
 
      .section_automotive           — min-height (section size)
@@ -10,13 +10,14 @@
      .watchit-glow-left            — glow positioning
      .watchit-glow-right           — glow positioning
 
-   The injected <script> still handles:
-     - wrapper background color (#020021) and overflow
-     - bottom fade gradient overlay
-     - canvas mix-blend-mode + radial mask
-     - the actual canvas frame-rendering animation
-
-   Keeping this file as a no-op so the existing <link> in the script
-   still resolves (200 OK) and we can put hot-patch CSS here later
-   if needed without redeploying the Webflow script.
+   This file lets us hot-patch CSS without a Webflow republish.
 ---------------------------------------------------------------- */
+
+/* Aggressive radial mask on the canvas so the "dark shadow zone"
+   around the product (corner pixels of each WebP frame) fades to
+   transparent before it reaches the canvas edge. Without this the
+   canvas's rectangular bounds become visible as a dark box. */
+#watchit-rotate-canvas {
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%) !important;
+          mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%) !important;
+}
