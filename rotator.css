@@ -11,29 +11,7 @@
 ---------------------------------------------------------------- */
 
 .section_automotive {
-  position: relative !important;
-  min-height: 500vh !important;
+  min-height: 100vh !important;
   margin-bottom: 0 !important;
   overflow: visible !important;
-}
-
-.section_automotive > .padding-global {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.section_automotive .container-large,
-.section_automotive .padding-section-large,
-.section_automotive .automotive_component {
-  width: 100%;
-}
-
-@media (max-width: 991px) {
-  .section_automotive {
-    min-height: 400vh !important;
-  }
 }
