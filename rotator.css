@@ -1,17 +1,19 @@
 /* ----------------------------------------------------------------
    watchit rotator — structural CSS only.
 
-   Spacing / sizing (text padding-top, product margin-top, max-height)
-   live as native styles in the Webflow Designer on:
+   Spacing / sizing (text padding-top, product margin-top, max-height,
+   glow positions) live as native styles in the Webflow Designer on:
      .automotive_content
      .automotive_bg-image-wrapper
+     .watchit-glow-left
+     .watchit-glow-right
    so team members can adjust them visually from the style panel.
 
    Don't add those rules here — they'd override Designer edits.
 ---------------------------------------------------------------- */
 
 .section_automotive {
-  min-height: 100vh !important;
+  height: 100vh !important;
   margin-bottom: 0 !important;
-  overflow: visible !important;
+  overflow: hidden !important;
 }
